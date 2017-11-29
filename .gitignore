@@ -1,0 +1,4 @@
+.idea/
+/app/cart/migrations/0*.py
+/app/courses/migrations/0*.py
+*.pyc

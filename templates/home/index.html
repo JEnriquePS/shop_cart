@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Cursos</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+
+    {% for course in courses %}
+        <span>{{ course }}</span> <a href="{% url 'course:add' id=course.id %}">comprar</a>
+    {% empty %}
+        <p>ningun curso diaponible</p>
+    {% endfor %}
+{% endblock %}

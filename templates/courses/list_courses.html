@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for course in courses %}
+        <span>{{ course }}</span>
+    {% endfor %}
+    <p>costo total: {{ request.session.cost }}</p>
+    <a href="{% url 'cart_view:compra' %}">Comprar</a>
+{% endblock %}

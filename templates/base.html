@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<span>{{ user.username }}</span>/
+<a href="{% url 'course:list_pago' %}">Compras <span>{% if  request.session.cost %}{{ request.session.cost }}{% else %}0{% endif %}</span></a>/
+<a href="{% url 'logout' %}">Salir</a>
+<br>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
